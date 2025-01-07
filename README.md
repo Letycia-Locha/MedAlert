@@ -28,6 +28,43 @@ O **MedAlert** é um sistema de gerenciamento de medicações desenvolvido em Py
 ## 🚀 Como Configurar e Executar
 
 1. **Clone o repositório**:
-   ```bash
-   git clone https://github.com/seu-usuario/MedAlert.git
-   cd MedAlert
+ -  ```bash
+ - git clone https://github.com/seu-usuario/MedAlert.git
+ - cd MedAlert
+2. **Configure o ambiente virtual**:
+ -   python -m venv venv
+ -  source venv/bin/activate # No Windows: venv\Scripts\activate
+3. **Instale as dependências**:
+ -  pip install -r requirements.txt
+4. **Crie um arquivo .env na raiz do projeto**:
+ -   ACCOUNT_SID=seu_account_sid
+ -   AUTH_TOKEN=seu_auth_token
+ -   TWILIO_PHONE=seu_numero_twilio
+5. **Inicie o Servidor**:
+ -   python server.py
+6. **Configure o Ngrok para expor o servidor local ao Twilio:**:
+ -   lembre-se de criar uma conta no Ngrok antes de utiliza-lo e fazer o download do mesmo
+ -   ngrok http 8080
+7. **Teste o sistema enviando uma mensagem para o número Twilio no WhatsApp.**
+
+## 📝 Estrutura do Projeto
+MedAlert/
+- ├── app.py               # Código do fluxo principal do app
+- ├── server.py            # Integração com Twilio e WhatsApp
+- ├── registro_numeros.py  # Funções de manipulação do banco de dados
+- ├── database.db          # Banco de dados SQLite
+- ├── requirements.txt     # Dependências do projeto
+- ├── .env                 # Variáveis de ambiente (não versionado)
+- └── venv/                # Ambiente virtual Python
+
+## 🔒 Segurança
+  -  Certifique-se de *NUNCA* versionar informações sensíveis como ACCOUNT_SID, AUTH_TOKEN ou TWILIO_PHONE. Utilize o arquivo .env para proteger esses dados.
+**Adicione o seguinte ao seu .gitignore:**
+   - .env
+   - *.db
+   - venv/
+
+# 🤝 Contribuições
+  - Contribuições são bem-vindas! Sinta-se à vontade para abrir Issues ou enviar um Pull Request. 
+
+
