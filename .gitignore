@@ -1,0 +1,11 @@
+# Excluir ambientes virtuais
+venv/
+
+# Excluir tokens sensíveis
+*.env
+
+# Excluir banco de dados local
+*.db
+
+# Outros arquivos desnecessários
+__pycache__/
