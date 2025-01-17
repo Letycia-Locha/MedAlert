@@ -1,0 +1,17 @@
+# Dependências do projeto Flutter MedAlert
+
+- flutter:
+  SDK oficial do Flutter para desenvolvimento de aplicativos multiplataforma.
+
+- cupertino_icons:
+  Versão: ^1.0.8
+  Conjunto de ícones no estilo iOS para aplicativos Flutter.
+
+- flutter_lints:
+  Versão: ^5.0.0
+  Conjunto de regras de lint recomendadas para código Dart e Flutter.
+
+# Dependências específicas de plataforma, geradas automaticamente:
+- dart_tool/
+- build/
+- arquivos específicos para Android, iOS, Web, macOS e Windows.
